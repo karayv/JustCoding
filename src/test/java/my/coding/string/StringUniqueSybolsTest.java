@@ -1,6 +1,8 @@
-package my.coding;
+package my.coding.string;
 
 import static org.junit.Assert.*;
+
+import my.coding.string.StringUniqueSybols;
 
 import org.junit.Test;
 

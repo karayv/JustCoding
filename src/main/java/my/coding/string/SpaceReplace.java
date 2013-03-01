@@ -1,4 +1,4 @@
-package my.coding;
+package my.coding.string;
 
 public class SpaceReplace {
 

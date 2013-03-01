@@ -1,8 +1,10 @@
-package my.coding;
+package my.coding.trie;
 
 import static org.junit.Assert.*;
 
 import java.util.List;
+
+import my.coding.trie.FindTextIndexes;
 
 import org.junit.Test;
 

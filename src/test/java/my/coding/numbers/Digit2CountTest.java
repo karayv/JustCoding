@@ -1,10 +1,17 @@
-package my.coding;
+package my.coding.numbers;
 
 import static org.junit.Assert.assertEquals;
 
+
 import org.junit.Test;
 
-
+/**
+ * Test for task.
+ * Counts how many times digit 2 appears in the number.
+ * 
+ * @author Andrey Karayvansky
+ *
+ */
 public class Digit2CountTest {
 
     Digit2Count service = new Digit2Count();

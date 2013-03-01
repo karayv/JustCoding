@@ -1,6 +1,7 @@
-package my.coding;
+package my.coding.linkedlist;
 
 import static org.junit.Assert.*;
+
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package my.coding;
+package my.coding.string;
 
 import java.util.Arrays;
 import java.util.Comparator;

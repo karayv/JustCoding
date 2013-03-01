@@ -1,4 +1,4 @@
-package my.coding;
+package my.coding.trie;
 
 import java.util.ArrayList;
 import java.util.HashMap;

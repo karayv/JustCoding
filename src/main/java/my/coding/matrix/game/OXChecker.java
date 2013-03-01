@@ -1,4 +1,4 @@
-package my.coding;
+package my.coding.matrix.game;
 
 public class OXChecker {
 

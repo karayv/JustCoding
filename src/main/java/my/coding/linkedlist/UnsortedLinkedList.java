@@ -1,4 +1,4 @@
-package my.coding;
+package my.coding.linkedlist;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
