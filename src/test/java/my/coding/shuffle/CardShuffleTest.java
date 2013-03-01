@@ -1,4 +1,4 @@
-package my.coding;
+package my.coding.shuffle;
 
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
@@ -8,8 +8,16 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
+import my.coding.shuffle.CardShuffle;
+
 import org.junit.Test;
 
+/**
+ * Test class for classical task about card shuffling.
+ * 
+ * @author Andrey Karayvansky
+ *
+ */
 public class CardShuffleTest {
 
     CardShuffle service = new CardShuffle();
@@ -28,6 +36,7 @@ public class CardShuffleTest {
     public void testShuffle() {
         int[] cardCodes = new int[36];
         int[] copyCardCodes = new int[36];
+        
         for (int i = 1; i<= cardCodes.length; i++) {
             cardCodes[i - 1] = i;
             copyCardCodes[i - 1] = i;
@@ -43,6 +52,7 @@ public class CardShuffleTest {
             set1.add(copyCardCodes[i]);
             set2.add(shuffledCards[i]);
         }
+        
         assertEquals(set1, set2);
     }
 

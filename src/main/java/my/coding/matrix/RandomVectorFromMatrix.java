@@ -1,10 +1,8 @@
-package my.coding.aws;
+package my.coding.matrix;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.lang.reflect.Array;
+
+import my.coding.shuffle.Shuffle;
 
 /**
  * Given square matrix of N rows and N columns return array of N elements as
@@ -29,22 +27,22 @@ public class RandomVectorFromMatrix<T> {
         }
         checkThatMatrixIsSquare(matrix);
         
-        Set<Integer> rowIndexesTaken = new HashSet<>();
-        Set<Integer> columnIndexesTaken = new HashSet<>();
+        // created arrays with indexes in values than shuffle them 
+        int[] columnIndexesTaken = getIndexArray(matrix.length);
+        int[] rowIndexesTaken = columnIndexesTaken.clone(); // clone should work faster
         
-        List<T> resultList = new ArrayList<>(matrix.length);
-
-        // do the logic
+        columnIndexesTaken = Shuffle.shuffleIntArray(columnIndexesTaken);
+        rowIndexesTaken = Shuffle.shuffleIntArray(rowIndexesTaken);
+        
+        // new array for result here
+        @SuppressWarnings("unchecked")
+        T[] res = (T[]) Array.newInstance(matrix[0].getClass().getComponentType(), matrix[0].length);
+        
+        // populating result
         for (int i = 0; i < matrix.length; i++) { 
-            int columnIdx = getRandomFrom0toNExcludingTheSet(matrix.length, columnIndexesTaken);
-            int rowIdx = getRandomFrom0toNExcludingTheSet(matrix.length, rowIndexesTaken);
-            
-            resultList.add(matrix[rowIdx][columnIdx]);
-            
-            rowIndexesTaken.add(rowIdx);
-            columnIndexesTaken.add(columnIdx);
+            res[i] = matrix[rowIndexesTaken[i]][columnIndexesTaken[i]];
         }
-        return resultList.toArray(Arrays.copyOfRange(matrix[0], 0, matrix[0].length));
+        return res;
     }
 
     private void checkThatMatrixIsSquare(T[][] matrix) {
@@ -55,11 +53,11 @@ public class RandomVectorFromMatrix<T> {
         }
     }
 
-    private int getRandomFrom0toNExcludingTheSet(int n, Set<Integer> exclSet) {
-        int rnd = (int) (Math.random() * (n - exclSet.size()));
-        while (exclSet.contains(rnd)) {
-            rnd++;
+    private int[] getIndexArray(int size) {
+        int[] res = new int[size];
+        for (int i = 0; i < size; i++) {
+            res[i] = i;
         }
-        return rnd;
+        return res;
     }
 }

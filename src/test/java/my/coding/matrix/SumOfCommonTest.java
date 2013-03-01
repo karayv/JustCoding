@@ -1,14 +1,23 @@
-package my.coding.aws;
+package my.coding.matrix;
 
 import static org.junit.Assert.*;
 
 import java.math.BigInteger;
 
 
+import my.coding.matrix.SumOfCommon;
+
 import org.junit.Test;
 
+/**
+ * Test for the task:
+ * 
+ * Given an array of n integers, find the sum of the most common integer. 
+ * 
+ * @author Andrey Karayvansky
+ *
+ */
 public class SumOfCommonTest {
-
     
     SumOfCommon service = new SumOfCommon();
     

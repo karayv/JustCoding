@@ -1,14 +1,14 @@
-package my.coding.aws;
+package my.coding.matrix;
 
 import static org.junit.Assert.*;
 
 import java.util.HashSet;
 import java.util.Set;
 
+
 import org.junit.Test;
 
 /**
- * 
  * Given square matrix of N rows and N columns return array of N elements as
  * output, choosing them at random one from each row and one from each column.
  * Original matrix does not need to be preserved if it helps the solution.

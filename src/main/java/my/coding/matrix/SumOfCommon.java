@@ -1,11 +1,28 @@
-package my.coding.aws;
+package my.coding.matrix;
 
 import java.math.BigInteger;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Solution for the task
+ * 
+ * Given an array of n integers, find the sum of the most common integer.
+ * 
+ * @author Andrey Karayvansky
+ *
+ */
 public class SumOfCommon {
 
+    /**
+     * Get the sum of the most common integer in the array.
+     * Example: (2,4,5,6,4) – return 8 (as 4+4 = 8). 
+     * (1,2,1,3,1) – return 3 (as 1+1+1 = 3).
+     * 
+     * 
+     * @param array
+     * @return the sum
+     */
     public BigInteger getSummOfCommon(int[] array) {
 
         if (array == null) {
@@ -41,6 +58,13 @@ public class SumOfCommon {
         return res;
     }
 
+    /**
+     * Populate a map where keys are distinct values of the input array, values
+     * show how often the key value appears in the input array.
+     * 
+     * @param array
+     * @param countsMap
+     */
     private void populateCountsMap(int[] array, Map<Integer, Integer> countsMap) {
         for (int elem : array) {
             Integer count = countsMap.get(elem);
