@@ -20,7 +20,7 @@ public class ZeroCrossesTest {
         int[][] inp = {{0, 1,  0, 2},
                       {-2, 3, 10, 8},
                       { 0, 2,-20, 6},
-                      { 1, 2,  4, 0},
+                      { 1, 2,  4,-3},
                       { 7, 3,  5, 0}};
         
         int[][] out = service.drawZeroCrosses(inp);
