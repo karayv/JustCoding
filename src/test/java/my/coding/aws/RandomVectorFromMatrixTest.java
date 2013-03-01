@@ -8,7 +8,6 @@ import java.util.Set;
 import org.junit.Test;
 
 /**
- * The test case for the amazon coding task.
  * 
  * Given square matrix of N rows and N columns return array of N elements as
  * output, choosing them at random one from each row and one from each column.
@@ -18,8 +17,6 @@ import org.junit.Test;
  *
  */
 public class RandomVectorFromMatrixTest {
-
-    
     
     @Test(expected=NullPointerException.class)
     public void testNullArg() {
