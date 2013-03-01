@@ -1,10 +1,22 @@
 package my.coding.string;
 
+/**
+ * Task.
+ * 
+ * Write a method to replace all spaces in a string with ‘%20’.
+ * 
+ * @author Andrey Karayvansky
+ *
+ */
 public class SpaceReplace {
 
+    /**
+     * Replace all spaces in char array with ‘%20’.
+     * 
+     * @param charArray
+     * @return resulting char array
+     */
     public char[] replace(char[] charArray) {
-        // do checks for input here
-        
         // assume that we have enough length
         char[] res = new char[charArray.length << 2];
         char[] space = new char[] {'%', '2','0'};

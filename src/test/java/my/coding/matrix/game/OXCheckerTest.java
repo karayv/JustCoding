@@ -5,6 +5,13 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+/**
+ * Test for the helper service for tick-tack-toe game field with arbitrary
+ * field size and arbitrary size of the line to win.
+ * 
+ * @author Andrey Karayvansky
+ *
+ */
 public class OXCheckerTest {
 
     OXChecker service = new OXChecker();

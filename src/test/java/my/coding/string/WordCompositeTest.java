@@ -2,10 +2,17 @@ package my.coding.string;
 
 import static org.junit.Assert.*;
 
-import my.coding.string.WordComposite;
-
 import org.junit.Test;
 
+/**
+ * Task.
+ * 
+ * Write an algorithm to find a longest word - composition of other words in an
+ * array of words.
+ * 
+ * @author Andrey Karayvansky
+ *
+ */
 public class WordCompositeTest {
 
     WordComposite service = new WordComposite();

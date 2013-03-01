@@ -6,6 +6,15 @@ import my.coding.string.StringCompress;
 
 import org.junit.Test;
 
+/**
+ * Test for task.
+ * 
+ * Write algorithm to compress a string in the like aaaabbbccce -> a4b3c3e1. If
+ * compression is not effective, return initial string.
+ * 
+ * @author Andrey Karayvansky
+ *
+ */
 public class StringCompressTest {
 
     StringCompress service = new StringCompress();

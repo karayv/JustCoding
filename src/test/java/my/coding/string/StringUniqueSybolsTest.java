@@ -6,6 +6,15 @@ import my.coding.string.StringUniqueSybols;
 
 import org.junit.Test;
 
+/**
+ * Test for task.
+ * 
+ * Implement an algorithm to determine if a string has all unique characters.
+ * What if you can not use additional data structures?
+ * 
+ * @author Andrey Karayvansky
+ * 
+ */
 public class StringUniqueSybolsTest {
 
     StringUniqueSybols service = new StringUniqueSybols();

@@ -5,6 +5,12 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+/**
+ * Test for finding sum without arithmetic operations like + or -.
+ * 
+ * @author Andrey Karayvansky
+ *
+ */
 public class SumWithoutPlusTest {
 
     SumWithoutPlus service = new SumWithoutPlus();

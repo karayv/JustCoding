@@ -5,11 +5,24 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Task.
+ * 
+ * Given a string s and an array of smaller strings T, design a method to search s for each small string in T.
+ * 
+ * @author Andrey Karayvansky
+ *
+ */
 public class FindTextIndexes {
 
     private boolean emptyText;
     private TrieNode root;
     
+    /**
+     * Constructor of service.
+     * 
+     * @param text the text to be indexed.
+     */
     public FindTextIndexes(String text) {
         if (text == null) {
             throw new NullPointerException("The text cannot be null.");
@@ -19,6 +32,12 @@ public class FindTextIndexes {
         root = new TrieNode(text);
     }
 
+    /**
+     * Find entry indexes of the string snippet.
+     * 
+     * @param string the snippet 
+     * @return list of indexes starting from the beginning of the text
+     */
     public List<Integer> find(String string) {
         if (emptyText) {
             return root.indexes;

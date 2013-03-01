@@ -1,9 +1,41 @@
 package my.coding.numbers;
 
-
+/**
+ * Test for finding sum without arithmetic operations like + or -.
+ * 
+ * @author Andrey Karayvansky
+ *
+ */
 public class SumWithoutPlus {
 
+    /** 
+     * Fast and simple implementation for two integers.
+     * 
+     * @param int1
+     * @param int2
+     * @return the sum of arguments
+     */
     public int sum(int int1, int int2) {
+        if (int1 == 0) {
+            return int2;
+        }
+        if (int2 == 0) {
+            return int1;
+        }
+        
+        int xorSum = int1 ^ int2;
+        int addition = (int1 & int2) << 1;
+        return sum(xorSum, addition);
+    }
+    
+    /**
+     * Heavy implementation. Kept for children :)
+     * 
+     * @param int1
+     * @param int2
+     * @return the sum
+     */
+    public int sum2(int int1, int int2) {
         if (int1 == 0) {
             return int2;
         }
@@ -35,16 +67,4 @@ public class SumWithoutPlus {
         return sum;
     }
 
-    public int sum2(int int1, int int2) {
-        if (int1 == 0) {
-            return int2;
-        }
-        if (int2 == 0) {
-            return int1;
-        }
-        
-        int xorSum = int1 ^ int2;
-        int addition = (int1 & int2) << 1;
-        return sum2(xorSum, addition);
-    }
 }

@@ -2,12 +2,21 @@ package my.coding.linkedlist;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
+/**
+ * Tasks.
+ * 
+ * Write code to remove duplicates from an unsorted linked list.
+ * Implement an algorithm to find the nth to last element of a singly linked list.
+ * 
+ * @author Andrey Karayvansky
+ * 
+ * @param <T>
+ */
 public class UnsortedLinkedList<T> {
 
-    Node<T> first;
-    Node<T> last;
-    private volatile AtomicInteger size = new AtomicInteger(0);
-    
+    private Node<T> first;
+    private Node<T> last;
+    private final AtomicInteger size = new AtomicInteger(0);
     
     private class Node<TN> {
         Node<TN> next;

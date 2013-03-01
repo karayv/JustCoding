@@ -3,14 +3,29 @@ package my.coding.string;
 import java.util.Arrays;
 import java.util.Comparator;
 
+/**
+ * Task.
+ * 
+ * Write an algorithm to find a longest word - composition of other words in an
+ * array of words.
+ * 
+ * @author Andrey Karayvansky
+ * 
+ */
 public class WordComposite {
 
+    /**
+     * Finds the longest word - composition of other words in the input string array.
+     * 
+     * @param in the array of words
+     * @return the longest word - composition
+     */
     public String findLongestComposite(String[] in) {
         if (in == null) {
-            throw new NullPointerException("Input list cannot be null");
+            throw new NullPointerException("Input array cannot be null");
         }
         if (in.length == 0) {
-            throw new IllegalArgumentException("Input list cannot be empty");
+            throw new IllegalArgumentException("Input array cannot be empty");
         }
         if (in.length == 1) {
             return in[0];
@@ -20,18 +35,18 @@ public class WordComposite {
         Arrays.sort(sortedIn, new StringLengthComparator());
         
         for (int i = sortedIn.length - 1; i >= 0; i--) {
-            if (isAWrodComposition(sortedIn, i, sortedIn[i])) {
+            if (isAWordComposition(sortedIn, i, sortedIn[i])) {
                 return sortedIn[i];
             }
         }
         return "";
     }
 
-    private boolean isAWrodComposition(String[] sortedIn, int wordIndex, String word) {
+    private boolean isAWordComposition(String[] sortedIn, int wordIndex, String word) {
 
         for (int i = wordIndex - 1; i >= 0; i--) {
             if (word.startsWith(sortedIn[i])) {
-                if (word.equals(sortedIn[i]) || isAWrodComposition(sortedIn, wordIndex, word.substring(sortedIn[i].length()))) {
+                if (word.equals(sortedIn[i]) || isAWordComposition(sortedIn, wordIndex, word.substring(sortedIn[i].length()))) {
                     return true;
                 }
             }

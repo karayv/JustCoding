@@ -8,9 +8,18 @@ import my.coding.trie.FindTextIndexes;
 
 import org.junit.Test;
 
+/**
+ * Test for task. 
+ * 
+ * Given a string s and an array of smaller strings T, design a
+ * method to search s for each small string in T.
+ * 
+ * @author Andrey Karayvansky
+ * 
+ */
 public class FindTextIndexesTest {
 
-    @Test(expected=NullPointerException.class)
+    @Test(expected = NullPointerException.class)
     public void testNullArg() {
         new FindTextIndexes(null);
     }
@@ -26,7 +35,7 @@ public class FindTextIndexesTest {
     public void test() {
         FindTextIndexes text = new FindTextIndexes("asd fghjk asf");
         List<Integer> indexes = text.find("as");
-        assertArrayEquals(new Integer[] {0, 10}, indexes.toArray());
+        assertArrayEquals(new Integer[] { 0, 10 }, indexes.toArray());
     }
 
 }

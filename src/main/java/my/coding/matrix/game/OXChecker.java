@@ -1,7 +1,23 @@
 package my.coding.matrix.game;
 
+/**
+ * This class is a helper service for tick-tack-toe game field with arbitrary
+ * field size and arbitrary size of the line to win.
+ * 
+ * @author Andrey Karayvansky
+ * 
+ */
 public class OXChecker {
 
+    /**
+     * Checks whether the last move was winning or not.
+     * 
+     * @param field the game field with possible values 1, 2 or 0 (0 is no move).
+     * @param lastX last move coordinate X
+     * @param lastY last move coordinate Y
+     * @param sizeToWin size of a line to win
+     * @return true if last move was winning 
+     */
     public boolean check(byte[][] field, int lastX, int lastY, int sizeToWin) {
         if (field == null) {
             throw new NullPointerException("Field cannot be null.");

@@ -1,7 +1,23 @@
 package my.coding.string;
 
+/**
+ * Task.
+ * 
+ * Write algorithm to compress a string in the like aaaabbbccce -> a4b3c3e1. If
+ * compression is not effective, return initial string.
+ * 
+ * @author Andrey Karayvansky
+ * 
+ */
 public class StringCompress {
 
+    /**
+     * Compresses a string. Return initial string if compression is not
+     * effective.
+     * 
+     * @param string
+     * @return
+     */
     public String compress(String string) {
         if (string == null || "".equals(string)) {
             return string;

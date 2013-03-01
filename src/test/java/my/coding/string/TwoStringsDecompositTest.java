@@ -6,6 +6,15 @@ import my.coding.string.TwoStringsDecomposit;
 
 import org.junit.Test;
 
+/**
+ * Test for the task.
+ * 
+ * Write an algorithm to verify whether two strings are decomposition of each
+ * other.
+ * 
+ * @author Andrey Karayvansky
+ *
+ */
 public class TwoStringsDecompositTest {
 
     TwoStringsDecomposit service = new TwoStringsDecomposit();

@@ -3,17 +3,33 @@ package my.coding.string;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Task.
+ * 
+ * Write an algorithm to verify whether two strings are decomposition of each
+ * other.
+ * 
+ * @author Andrey Karayvansky
+ * 
+ */
 public class TwoStringsDecomposit {
 
-    public boolean sameSetOfSymbols(String string, String string2) {
-        if (string == null || string2 ==null) throw new NullPointerException("Null.");
-        if ("".equals(string) || "".equals(string2)) throw new IllegalArgumentException("Empty.");
+    /**
+     * Checks whether two string strings have same set of symbols.
+     * 
+     * @param string1
+     * @param string2
+     * @return true if two strings are decomposition of each other.
+     */
+    public boolean sameSetOfSymbols(String string1, String string2) {
+        if (string1 == null || string2 ==null) throw new NullPointerException("Null.");
+        if ("".equals(string1) || "".equals(string2)) throw new IllegalArgumentException("Empty.");
 
-        if (string.length() != string2.length()) {
+        if (string1.length() != string2.length()) {
             return false;
         }
 
-        Map<Character, Integer> str1SybolsMap = symbolsMap(string);
+        Map<Character, Integer> str1SybolsMap = symbolsMap(string1);
         Map<Character, Integer> str2SybolsMap = symbolsMap(string2);
         
         return compareSymbolsMap(str1SybolsMap, str2SybolsMap);

@@ -1,7 +1,22 @@
 package my.coding.string;
 
+/**
+ * Task.
+ * 
+ * Implement an algorithm to determine if a string has all unique characters.
+ * What if you can not use additional data structures?
+ * 
+ * @author Andrey Karayvansky
+ * 
+ */
 public class StringUniqueSybols {
 
+    /**
+     * Checks whether the string contains only unique characters.
+     * 
+     * @param str the string to check
+     * @return true the input string contains only unique characters
+     */
     public boolean uniqueOnly(String str) {
         if (str == null)
             throw new NullPointerException("The argument should not be null.");
