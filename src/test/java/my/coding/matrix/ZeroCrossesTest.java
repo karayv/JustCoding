@@ -1,9 +1,19 @@
-package my.coding;
+package my.coding.matrix;
 
 import static org.junit.Assert.*;
 
+import my.coding.matrix.ZeroCrosses;
+
 import org.junit.Test;
 
+/**
+ * Test for task.
+ * 
+ * Write an algorithm such that if an element in an MxN matrix is 0, its entire row and column is set to 0.
+ * 
+ * @author Andrey Karayvansky
+ *
+ */
 public class ZeroCrossesTest {
 
     ZeroCrosses service = new ZeroCrosses();
