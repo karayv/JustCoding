@@ -5,8 +5,8 @@ import java.lang.reflect.Array;
 import my.coding.shuffle.Shuffle;
 
 /**
- * Given square matrix of N rows and N columns return array of N elements as
- * output, choosing them at random one from each row and one from each column.
+ * Develop algorithm to return array of N elements from matrix of N rows and N columns
+ * choosing them at random one from each row and one from each column.
  * Original matrix does not need to be preserved if it helps the solution.
  * 
  * @author Andrey Karayvansky
