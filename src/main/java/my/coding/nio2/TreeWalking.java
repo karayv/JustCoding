@@ -11,7 +11,7 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 import java.util.stream.Stream;
 
-public class TreeWalkingTest {
+public class TreeWalking {
 
     private Comparator<Path> pathDescCmp = (p1, p2) -> p2.getFileName().toString()
             .compareTo(p1.getFileName().toString());
@@ -53,7 +53,7 @@ public class TreeWalkingTest {
         System.out.println("Walking file tree " + path.toAbsolutePath()
                 + " finding top 5 alphabetically ordered file names.\n");
         
-        Stream<Path> top5 = new TreeWalkingTest()
+        Stream<Path> top5 = new TreeWalking()
             .firstAlphaOrdered(path, 5);
         
         top5.map(p -> p.getFileName().toString()).forEach(System.out::println);
